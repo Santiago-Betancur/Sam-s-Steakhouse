@@ -1,0 +1,618 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat;
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(255, 255, 255);
+}
+
+section {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 1.2rem;
+  color: #600e0d;
+  padding-top: 20px;
+}
+
+.button {
+  text-align: center;
+  min-width: 150px;
+  background-color: #ffffff;
+  border: #600e0d solid 2px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px 15px;
+}
+
+.button:hover {
+  background-color: #600e0d;
+  color: #fffdd0;
+}
+
+.button a {
+  color: black;
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button a:hover {
+  font-size: 1rem;
+  color: white;
+  padding: 5px;
+}
+
+/*FOOTER*/
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  background-color: #600e0d;
+  color: #fffdd0;
+}
+
+.footer-adress {
+  padding-left: 20px;
+  flex-basis: 20%;
+  font-size: 0.9rem;
+}
+
+.footer-number a {
+  color: #fcf8e8;
+  font-size: 1rem;
+  flex-basis: 30%;
+}
+
+.footer-number h3 {
+  font-size: 1rem;
+}
+
+.socials {
+  flex-basis: 13%;
+}
+
+.socials ul li {
+  display: inline-flex;
+  list-style-type: none;
+}
+
+.socials ul li i {
+  color: #eff5f4;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+}
+
+/******************************************************************************************************Navigation***************************************************************************************************************/
+
+header {
+  background-color: #fbfbfb;
+}
+
+.navigation-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #f6ebc2;
+  align-items: center;
+  padding-top: 5px;
+  margin-top: 0%;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.logo img {
+  flex-basis: 1;
+  flex-shrink: 2;
+  max-height: 120px;
+  padding: 10px 0px;
+  margin-left: 20px;
+}
+
+nav {
+  display: flex;
+  padding: 0%;
+}
+
+nav ul li {
+  display: inline-flex;
+}
+
+nav li a {
+  font-family: Montserrat;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #600e0d;
+  text-decoration: none;
+  padding: 0 8px;
+  text-transform: uppercase;
+  transition: all 0.4s ease 0s;
+}
+
+nav li a:hover {
+  font-size: 1rem;
+}
+
+/***************************************************************************************HERO IMAGE*************************************************************************************/
+.hero-container {
+  background-image: linear-gradient(
+      to top,
+      rgba(20, 18, 18, 0.219),
+      rgba(116, 115, 111, 0.418)
+    ),
+    url(/resources/images/Sams\ food\ example.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero-content {
+  flex-basis: 100%;
+  background: white;
+  padding: 1em;
+  opacity: 0.5;
+}
+
+.hero-content p {
+  color: #0c0b09;
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .navigation-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  nav ul li {
+    display: flex;
+    font-weight: bold;
+  }
+
+  nav ul li p {
+  }
+
+  nav ul li a {
+    justify-content: center;
+    align-items: center;
+    padding: 0px 4px 6px 4px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .footer-adress p {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .hero-container {
+    background-size: 40%;
+  }
+}
+
+/***********************************LOCATION*************************************************************************************************************************************/
+.location-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.location-logo {
+  height: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+.location-logo img {
+  height: 100%;
+}
+
+.location-map {
+  border: #600e0d solid 3px;
+  border-radius: 2%;
+}
+
+.location-adress {
+  flex-shrink: 2;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0px;
+  padding: 0px;
+}
+
+.location-adress h1 {
+  text-transform: uppercase;
+  color: #600e0d;
+  font-size: 1.8rem;
+  font-family: "PT Serif";
+  padding: 0x;
+  margin: 0;
+}
+
+@media only screen and (max-width: 450px) {
+  .location-logo {
+    display: none;
+  }
+}
+
+/******************** CONTACT US*****************************************************************************************************************************************************************************/
+
+.contact-container {
+  /* background-image: url(/resources/images/Sams\ outside\ pic\ example.jpeg);*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-container .socials {
+  margin-top: 20px;
+}
+
+.contact-container .socials ul li i {
+  color: #000000;
+  font-size: 2rem;
+}
+
+.contact-container .socials ul li i:hover {
+  font-size: 3.5rem;
+}
+
+.contact-container h1 {
+  font-size: 1.7rem;
+}
+
+.contact-container img {
+  max-height: 330px;
+}
+
+.contact-box p {
+  font-style: italic;
+}
+
+.contact-box p span {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #600e0d;
+  line-height: 1.2rem;
+}
+
+.contact-box embed {
+  text-transform: uppercase;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 30%;
+  height: 60%;
+  min-width: 300px;
+  color: #000000;
+  padding: 10px;
+  line-height: 35px;
+}
+
+.contact-box h1 {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+
+.contact-item p a {
+  color: #0c0b09;
+  font-weight: bold;
+}
+
+.contact-item h3 {
+  font-size: rem;
+  color: #600e0d;
+}
+
+.contact-item a i {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #000000;
+}
+
+.contact-item a i:hover {
+  font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .contact-container .socials {
+    margin-top: 10px;
+  }
+
+  .contact-container {
+    justify-items: center;
+    align-items: center;
+  }
+
+  .contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    min-width: 300px;
+    color: #000000;
+
+    line-height: 25px;
+  }
+
+  .contact-container h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/*****************************************ABOUT US**************************************************************************************************/
+.about-container {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.about-container img {
+  padding: 0;
+  margin: 0;
+  height: 320px;
+}
+
+.about-info {
+  flex-basis: 40%;
+}
+
+.about-info p {
+  font-size: 1.2rem;
+  padding-top: 10px;
+  line-height: 30px;
+}
+
+.about-info h1 {
+  font-size: 1.7rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .about-info {
+    flex-basis: 70%;
+  }
+
+  .about-info h1 {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+
+  .about-container img {
+    display: block;
+    height: 250px;
+    padding: 0;
+  }
+
+  .about-info p {
+    font-size: 1.1rem;
+    line-height: 25px;
+    text-align: left;
+  }
+}
+
+/*                                    MENU                             */
+.menu-navigation {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 3rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.menu-navigation h1 {
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.menu-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  padding: 0 0;
+}
+
+.menu-section h1 {
+  text-align: center;
+  font-family: Allura;
+  font-size: 3rem;
+  padding: 5px auto;
+  color: black;
+  width: 100%;
+}
+
+.menu-section p span {
+  font-weight: bold;
+}
+
+.menu-container {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item {
+  width: 50%;
+  padding: 1rem;
+}
+
+.menu-item h3 {
+  padding-bottom: 0.6rem;
+  color: #600e0d;
+}
+
+.menu-item p {
+  font-size: 1.1rem;
+  line-height: 1.2.3rem;
+}
+
+.menu-toppings {
+  flex-basis: 80%;
+  border: #600e0d solid 2px;
+  margin: 20px auto;
+  padding: 10px 5%;
+}
+
+.combination-box {
+  border: 2px solid black;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 15px;
+}
+
+.menu-button {
+  margin-left: 50%;
+}
+
+.drinks-container {
+  flex-direction: column;
+
+  margin: 20px auto;
+  padding: 0;
+}
+
+@media only screen and (max-width: 460px) {
+  .button {
+    flex: 1;
+  }
+
+  .menu-navigation {
+    flex-direction: column;
+  }
+
+  .menu-navigation h1 {
+    padding: 5px;
+    font-size: 0.7rem;
+  }
+
+  .menu-navigation h1 {
+    font-size: 2rem;
+  }
+
+  .menu-container {
+    flex-direction: column;
+  }
+
+  .menu-container h1 {
+    margin: 0;
+    padding: 0%;
+  }
+
+  .menu-item {
+    width: 95%;
+  }
+  .combination-box {
+    width: 80%;
+    text-align: left;
+    padding: 10px;
+  }
+}
+
+/*=========================== GALLERY  =========================================*/
+.gallery-container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+}
+
+.gallery-container img {
+  height: 300px;
+  width: 300px;
+}
+
+.gallery-container img:hover {
+  height: 600px;
+  width: 600px;
+}
+
+/**************************EVENTS********************************************************************************************************/
+.event-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.event-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-box h1 {
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 460px) {
+  .event-container {
+    flex-wrap: wrap;
+  }
+}
