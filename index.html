@@ -1,38 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=PT+Serif:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link href="/resources/css/style.css" rel="stylesheet" />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="/resources/images/Sams logo.png"
-    />
-    <script
-      src="https://kit.fontawesome.com/3fa9507377.js"
-      crossorigin="anonymous"
-    ></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/resources/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/resources/images/Sams logo.png">
     <title>Sam's Steak and Seafood</title>
-  </head>
-
-  <body>
+</head>
+<body>
     <section>
-      <header>
-        <div class="navigation-container">
-          <div class="logo">
-            <a href="/index.html"
-              ><img src="/resources/images/Sams logo.png"
-            /></a>
+    <header>
+        <div class="navigation-container" id="navigation-container">
+          <div class="logo" id="logo">
+            <a href="/index.html"><img src="/resources/images/Sams logo.png" alt="Sam's Logo"></a>
           </div>
-          <nav>
+          <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <nav id="desktop-menu">
             <ul>
               <li><a href="/menu.html">Menu</a></li>
               <li><a href="/about.html">About</a></li>
@@ -42,48 +34,38 @@
             </ul>
           </nav>
         </div>
+        <nav id="mobile-menu">
+          <ul>
+            <li><a href="/menu.html">Menu</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/events.html">Specials</a></li>
+          </ul>
+        </nav>
       </header>
-      <div class="hero-container"></div>
-      <footer>
-        <div class="footer-container">
-          <div class="footer-adress">
-            <h3>Sam's Seafood Steakhouse</h3>
-            <p>
-              281 North Comrie Avenue,<br />
-              Johnstown, NY 12095
-            </p>
-          </div>
-          <div class="footer-number">
-            <h3>Phone Number:</h3>
-            <p>
-              <a class="phone-number" href="tel:518-762-7267">518-762-7267</a>
-            </p>
-          </div>
-          <div class="socials">
-            <ul>
-              <li>
-                <a
-                  href="https://www.facebook.com/samsseafoodsteakhouse/?hc_ref=ARRcdGO6A5YAOOcuUkVFX1Ym_T0tcCh3E5vaAP0ZfECqvqvmGUP8xUsCdrX2y5Q9jpI&fref=nf&__xts__[0]=68.ARDV0N9ZH4CW1veHXv6MxZc-zBjBBSKxvPSxc7rC8oI7FUVd4nbBbCPUTGL7pChhZOLolSFKz-zcKWBs6iW2CXMkgOaY5B0sJkWQN4Fn8Zxzsu1sFnzy2NMIibjFEepaqBo50vVZm7fZzY9HyGwZwDDGhq5X-Ojx3jaeNUqewTT-7_KFVbcJnLrEoKcVHe_37UdPcjo6381UWX2-WxKp9sxTAxRuz8dx_-f_U1LGB27GKqnmWLOkL3tQvsVpUwgj0F3usfqwTL1YbsO7X5sB7ZDvd7dXfQe_qqb4p_Lrudytl59pA8mhCA"
-                  target="blank"
-                  ><i class="fa-brands fa-facebook-square"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/sams_johnstown/"
-                  target="blank"
-                  ><i class="fa-brands fa-instagram"></i
-                ></a>
-              </li>
-              <li>
-                <a href="mailto:steakhousesams@gmail.com"
-                  ><i class="fa-solid fa-envelope"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
+        <div class="hero-container"></div>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-adress">
+                    <h3>Sam's Seafood Steakhouse</h3>
+                    <p>281 North Comrie Avenue,<br> Johnstown, NY 12095</p>
+                </div>
+                <div class="footer-number">
+                    <h3>Phone Number:</h3>
+                    <p> <a class="phone-number" href="tel:518-762-7267">518-762-7267</a></p>
+                </div>
+                <div class="socials">
+                    <ul>
+                        <li><a href="https://www.facebook.com/samsseafoodsteakhouse/?hc_ref=ARRcdGO6A5YAOOcuUkVFX1Ym_T0tcCh3E5vaAP0ZfECqvqvmGUP8xUsCdrX2y5Q9jpI&fref=nf&__xts__[0]=68.ARDV0N9ZH4CW1veHXv6MxZc-zBjBBSKxvPSxc7rC8oI7FUVd4nbBbCPUTGL7pChhZOLolSFKz-zcKWBs6iW2CXMkgOaY5B0sJkWQN4Fn8Zxzsu1sFnzy2NMIibjFEepaqBo50vVZm7fZzY9HyGwZwDDGhq5X-Ojx3jaeNUqewTT-7_KFVbcJnLrEoKcVHe_37UdPcjo6381UWX2-WxKp9sxTAxRuz8dx_-f_U1LGB27GKqnmWLOkL3tQvsVpUwgj0F3usfqwTL1YbsO7X5sB7ZDvd7dXfQe_qqb4p_Lrudytl59pA8mhCA" target="_blank"><i class="fa-brands fa-facebook-square"></i></a></li>
+                        <li><a href="https://www.instagram.com/sams_johnstown/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="mailto:steakhousesams@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </section>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
 </html>

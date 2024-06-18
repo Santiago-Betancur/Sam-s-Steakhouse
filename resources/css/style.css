@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +6,12 @@
 }
 
 body {
-  font-family: Montserrat;
+  font-family: 'Roboto', sans-serif; /* Updated font-family */
   font-size: 16px;
-  margin: 0px;
-  padding: 0px;
-  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Updated background color */
+  color: #212529; /* Default text color */
 }
 
 section {
@@ -19,20 +21,23 @@ section {
 }
 
 h1 {
-  font-size: 1.2rem;
-  color: #600e0d;
+  font-size: 2rem; /* Modernized font size */
+  color: #343a40; /* Updated color */
   padding-top: 20px;
+  font-weight: 700; /* Bold weight for headings */
 }
 
+/* Button Styles */
 .button {
   text-align: center;
   min-width: 150px;
   background-color: #ffffff;
-  border: #600e0d solid 2px;
+  border: 2px solid #600e0d;
   border-radius: 50px;
   cursor: pointer;
   margin: 5px;
-  padding: 5px 15px;
+  padding: 10px 20px; /* Adjusted padding for modern look */
+  transition: all 0.3s ease; /* Smooth transition */
 }
 
 .button:hover {
@@ -42,9 +47,8 @@ h1 {
 
 .button a {
   color: black;
-  font-size: 0.8rem;
+  font-size: 0.9rem; /* Adjusted font size */
   font-weight: bold;
-  font-family: Montserrat;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -54,171 +58,255 @@ h1 {
   color: white;
   padding: 5px;
 }
-
-/*FOOTER*/
+/* Footer Styles */
 .footer-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between; /* Adjusted to space items evenly */
   align-items: center;
-  padding: 10px;
-  background-color: #600e0d;
-  color: #fffdd0;
+  padding: 20px 40px; /* Increased padding for modern look */
+  background-color: #f8f9fa; /* Same background color as navigation */
+  color: #343a40; /* Dark text color for contrast */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  max-width: 1200px; /* Constrain width */
+  margin: 0 auto; /* Center the footer */
+  border-top: 1px solid #dee2e6; /* Add a top border for separation */
 }
 
-.footer-adress {
-  padding-left: 20px;
-  flex-basis: 20%;
-  font-size: 0.9rem;
+.footer-address {
+  flex-basis: 30%; /* Adjusted for better layout */
+  font-size: 1rem; /* Increased font size */
+  padding: 10px; /* Added padding for spacing */
+}
+
+.footer-address p {
+  margin: 0;
 }
 
 .footer-number a {
-  color: #fcf8e8;
+  color: #343a40; /* Dark text color */
   font-size: 1rem;
-  flex-basis: 30%;
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-number a:hover {
+  color: #adb5bd; /* Hover effect */
 }
 
 .footer-number h3 {
   font-size: 1rem;
+  margin: 0;
 }
 
 .socials {
-  flex-basis: 13%;
+  flex-basis: 20%; /* Adjusted for better layout */
+  display: flex;
+  justify-content: center;
+}
+
+.socials ul {
+  display: flex;
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
 }
 
 .socials ul li {
-  display: inline-flex;
-  list-style-type: none;
+  margin: 0 10px; /* Add margin between icons */
 }
 
 .socials ul li i {
-  color: #eff5f4;
+  color: #343a40; /* Dark icon color */
   font-size: 1.5rem;
-  padding: 5px 10px;
+  transition: color 0.3s ease; /* Smooth transition */
 }
 
-/******************************************************************************************************Navigation***************************************************************************************************************/
+.socials ul li i:hover {
+  color: #adb5bd; /* Hover effect */
+}
+
+/* Navigation Styles */
+
 
 header {
-  background-color: #fbfbfb;
+  background-color: #ffffff; /* Updated background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
 }
 
 .navigation-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  background-color: #f6ebc2;
+  justify-content: space-between; /* Adjusted to space items evenly */
   align-items: center;
-  padding-top: 5px;
-  margin-top: 0%;
-  margin-bottom: 0;
+  padding: 10px 20px; /* Increased padding for modern look */
   width: 100%;
+  max-width: 1200px; /* Added max-width */
+  margin: 0 auto; /* Center the container */
 }
 
 .logo img {
-  flex-basis: 1;
-  flex-shrink: 2;
-  max-height: 120px;
-  padding: 10px 0px;
+  max-height: 60px; /* Reduced size for modern look */
   margin-left: 20px;
 }
 
 nav {
   display: flex;
-  padding: 0%;
+  padding: 0;
+}
+
+nav ul {
+  display: flex; /* Ensure flexbox layout */
+  list-style-type: none; /* Remove default list styling */
 }
 
 nav ul li {
-  display: inline-flex;
+  margin: 0 10px; /* Add margin between links */
 }
 
 nav li a {
-  font-family: Montserrat;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #600e0d;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem; /* Slightly larger font size */
+  font-weight: 500;
+  color: #343a40; /* Darker color for better readability */
   text-decoration: none;
-  padding: 0 8px;
   text-transform: uppercase;
-  transition: all 0.4s ease 0s;
+  transition: all 0.3s ease; /* Smooth transition */
+  padding: 5px 10px; /* Add padding for clickable area */
+  border-radius: 5px; /* Rounded corners for modern look */
 }
 
 nav li a:hover {
-  font-size: 1rem;
+  background-color: #600e0d; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+}
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
 }
 
-/***************************************************************************************HERO IMAGE*************************************************************************************/
-.hero-container {
-  background-image: linear-gradient(
-      to top,
-      rgba(20, 18, 18, 0.219),
-      rgba(116, 115, 111, 0.418)
-    ),
-    url(/resources/images/Sams\ food\ example.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+/* Mobile menu styles */
+#mobile-menu {
+  display: none;
+  position: absolute;
+  top: 60px; /* Adjust based on header height */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  
 }
 
-.hero-content {
-  flex-basis: 100%;
-  background: white;
-  padding: 1em;
-  opacity: 0.5;
+#mobile-menu ul {
+  width: 100%;
 }
 
-.hero-content p {
-  color: #0c0b09;
-  font-size: 1.3rem;
+#mobile-menu ul li {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box; /* This makes the padding and border included in the width */
+}
+#mobile-menu ul li a {
+  display: block;
+  padding: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.3s ease;
+ 
 }
 
-@media only screen and (max-width: 450px) {
-  .navigation-container {
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
   }
 
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  nav ul li {
-    display: flex;
-    font-weight: bold;
-  }
-
-  nav ul li p {
-  }
-
-  nav ul li a {
-    justify-content: center;
-    align-items: center;
-    padding: 0px 4px 6px 4px;
-    text-decoration: none;
-    text-transform: capitalize;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-
-  .footer-adress p {
+  #desktop-menu {
     display: none;
   }
 }
 
-@media only screen and (min-width: 2000px) {
-  .hero-container {
-    background-size: 40%;
-  }
+/* Hero Image Styles */
+.hero-container {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url('/resources/images/Sams food example.jpg'); /* Adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff; /* Text color for better contrast */
+  text-align: center; /* Center the text */
 }
 
-/***********************************LOCATION*************************************************************************************************************************************/
+.hero-content {
+  background: rgba(0, 0, 0, 0.5); /* Darker overlay */
+  padding: 2em;
+  border-radius: 10px; /* Rounded corners for modern look */
+}
+
+.hero-content h1 {
+  font-size: 2.5rem; /* Larger font size for heading */
+  margin-bottom: 0.5em;
+}
+
+.hero-content p {
+  font-size: 1.5rem; /* Adjusted font size for paragraph */
+  margin-bottom: 1em;
+}
+
+.hero-button {
+  background-color: #ffffff;
+  color: #343a40;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+
+/* Location Styles */
 .location-container {
   display: flex;
   align-items: center;
@@ -240,68 +328,67 @@ nav li a:hover {
 }
 
 .location-map {
-  border: #600e0d solid 3px;
+  border: 3px solid #600e0d;
   border-radius: 2%;
 }
 
-.location-adress {
-  flex-shrink: 2;
+.location-address {
   text-align: center;
   font-size: 1.5rem;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
-.location-adress h1 {
+.location-address h1 {
   text-transform: uppercase;
   color: #600e0d;
   font-size: 1.8rem;
-  font-family: "PT Serif";
-  padding: 0x;
+  font-family: "PT Serif", serif;
   margin: 0;
 }
-
-@media only screen and (max-width: 450px) {
-  .location-logo {
-    display: none;
-  }
-}
-
-/******************** CONTACT US*****************************************************************************************************************************************************************************/
-
+/* Contact Us Styles */
 .contact-container {
-  /* background-image: url(/resources/images/Sams\ outside\ pic\ example.jpeg);*/
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-}
-
-.contact-container .socials {
-  margin-top: 20px;
-}
-
-.contact-container .socials ul li i {
-  color: #000000;
-  font-size: 2rem;
-}
-
-.contact-container .socials ul li i:hover {
-  font-size: 3.5rem;
+  justify-content: center; /* Center content */
+  padding: 40px;
+  background-color: #ffffff;
+  color: #343a40;
+  height: 100vh; /* Ensure the container takes full viewport height */
+  box-sizing: border-box;
+  text-align: center; /* Center text */
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .contact-container h1 {
-  font-size: 1.7rem;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .contact-container img {
-  max-height: 330px;
+  max-height: 150px; /* Smaller image to fit within viewport */
+  border-radius: 10px; /* Rounded corners for images */
+  margin-bottom: 20px;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px; /* Constrain width */
+  margin: 10px 0; /* Reduced margin */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.05); /* Light background for contact box */
+  border-radius: 10px; /* Rounded corners */
 }
 
 .contact-box p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
   font-style: italic;
 }
 
@@ -312,140 +399,108 @@ nav li a:hover {
   line-height: 1.2rem;
 }
 
-.contact-box embed {
-  text-transform: uppercase;
-}
-
-.contact-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-basis: 30%;
-  height: 60%;
-  min-width: 300px;
-  color: #000000;
-  padding: 10px;
-  line-height: 35px;
-}
-
-.contact-box h1 {
-  font-family: "Montserrat";
-  text-transform: uppercase;
-  font-size: 0.9rem;
-}
-
 .contact-item {
   display: flex;
   flex-direction: column;
-  justify-self: center;
   align-items: center;
+  margin-bottom: 10px; /* Reduced margin */
 }
 
 .contact-item p a {
-  color: #0c0b09;
+  color: #343a40;
   font-weight: bold;
+  text-decoration: none; /* Remove underline */
+}
+
+.contact-item p a:hover {
+  color: #600e0d; /* Hover effect */
 }
 
 .contact-item h3 {
-  font-size: rem;
+  font-size: 1.2rem;
   color: #600e0d;
 }
 
 .contact-item a i {
   font-size: 2rem;
   text-decoration: none;
-  color: #000000;
+  color: #343a40;
+  margin-top: 10px;
 }
 
 .contact-item a i:hover {
-  font-size: 2.5rem;
+  color: #600e0d; /* Hover effect */
 }
 
-@media only screen and (max-width: 450px) {
-  .contact-container .socials {
-    margin-top: 10px;
-  }
-
-  .contact-container {
-    justify-items: center;
-    align-items: center;
-  }
-
-  .contact-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 40%;
-    min-width: 300px;
-    color: #000000;
-
-    line-height: 25px;
-  }
-
-  .contact-container h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    padding: 0;
-  }
+.contact-container .socials {
+  margin-top: 10px; /* Reduced margin */
 }
 
-/*****************************************ABOUT US**************************************************************************************************/
-.about-container {
-  height: 100vh;
+.contact-container .socials ul {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
   padding: 0;
-  margin: 0;
+}
+
+.contact-container .socials ul li {
+  margin: 0 10px;
+}
+
+.contact-container .socials ul li i {
+  color: #343a40;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.contact-container .socials ul li i:hover {
+  color: #600e0d; /* Hover effect */
+}
+
+
+/* About Us Styles */
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  padding: 40px;
+  background-color: #ffffff;
+  color: #343a40;
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+  gap: 20px; /* Add gap between flex items */
+  height: 100vh; /* Ensure the container takes full viewport height */
+  box-sizing: border-box;
 }
 
 .about-container img {
-  padding: 0;
-  margin: 0;
-  height: 320px;
+  flex-basis: 30%; /* Ensure images take up 25% of the container */
+  max-width: 25%; /* Ensure image does not exceed 25% width */
+  border-radius: 10px; /* Rounded corners for images */
+  margin: 0 20px; /* Add margin around the image */
 }
 
 .about-info {
-  flex-basis: 40%;
+  flex-basis: 60%; /* Ensure text takes up 60% of the container */
+ 
+}
+
+.about-info h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .about-info p {
   font-size: 1.2rem;
-  padding-top: 10px;
-  line-height: 30px;
+  line-height: 1.6;
 }
 
-.about-info h1 {
-  font-size: 1.7rem;
-}
 
-@media only screen and (max-width: 450px) {
-  .about-info {
-    flex-basis: 70%;
-  }
 
-  .about-info h1 {
-    font-size: 1.5rem;
-    padding: 0;
-  }
 
-  .about-container img {
-    display: block;
-    height: 250px;
-    padding: 0;
-  }
 
-  .about-info p {
-    font-size: 1.1rem;
-    line-height: 25px;
-    text-align: left;
-  }
-}
-
-/*                                    MENU                             */
+/* Menu Styles */
 .menu-navigation {
   display: inline-flex;
   align-items: center;
@@ -467,12 +522,12 @@ nav li a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #ffffff;
-  padding: 0 0;
+  padding: 0;
 }
 
 .menu-section h1 {
   text-align: center;
-  font-family: Allura;
+  font-family: Allura, cursive;
   font-size: 3rem;
   padding: 5px auto;
   color: black;
@@ -503,12 +558,12 @@ nav li a:hover {
 
 .menu-item p {
   font-size: 1.1rem;
-  line-height: 1.2.3rem;
+  line-height: 1.23rem;
 }
 
 .menu-toppings {
   flex-basis: 80%;
-  border: #600e0d solid 2px;
+  border: 2px solid #600e0d;
   margin: 20px auto;
   padding: 10px 5%;
 }
@@ -527,49 +582,11 @@ nav li a:hover {
 
 .drinks-container {
   flex-direction: column;
-
   margin: 20px auto;
   padding: 0;
 }
 
-@media only screen and (max-width: 460px) {
-  .button {
-    flex: 1;
-  }
-
-  .menu-navigation {
-    flex-direction: column;
-  }
-
-  .menu-navigation h1 {
-    padding: 5px;
-    font-size: 0.7rem;
-  }
-
-  .menu-navigation h1 {
-    font-size: 2rem;
-  }
-
-  .menu-container {
-    flex-direction: column;
-  }
-
-  .menu-container h1 {
-    margin: 0;
-    padding: 0%;
-  }
-
-  .menu-item {
-    width: 95%;
-  }
-  .combination-box {
-    width: 80%;
-    text-align: left;
-    padding: 10px;
-  }
-}
-
-/*=========================== GALLERY  =========================================*/
+/* Gallery Styles */
 .gallery-container {
   height: 100vh;
   display: flex;
@@ -589,7 +606,7 @@ nav li a:hover {
   width: 600px;
 }
 
-/**************************EVENTS********************************************************************************************************/
+/* Event Styles */
 .event-container {
   margin: 0;
   padding: 0;
@@ -611,8 +628,17 @@ nav li a:hover {
   text-transform: uppercase;
 }
 
-@media only screen and (max-width: 460px) {
-  .event-container {
-    flex-wrap: wrap;
+
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  #desktop-menu {
+    display: none;
   }
 }
+
+
