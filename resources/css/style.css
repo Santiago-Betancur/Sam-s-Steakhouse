@@ -21,7 +21,7 @@ section {
 }
 
 h1 {
-  font-size: 2rem; /* Modernized font size */
+  font-size: 1.7rem; /* Modernized font size */
   color: #343a40; /* Updated color */
   padding-top: 20px;
   font-weight: 700; /* Bold weight for headings */
@@ -122,6 +122,29 @@ h1 {
 
 .socials ul li i:hover {
   color: #adb5bd; /* Hover effect */
+}
+
+@media (max-width: 760px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-address,
+  .footer-number,
+  .socials {
+    flex-basis: 100%;
+    padding: 2.5px 0; /* Adjust padding for better spacing */
+  }
+
+  .socials ul {
+    justify-content: center;
+  }
+
+  .socials ul li {
+    margin: 10px; /* Adjust margin for better spacing */
+  }
 }
 
 /* Navigation Styles */
@@ -626,19 +649,6 @@ nav li a:hover {
 .event-box h1 {
   padding: 10px 0;
   text-transform: uppercase;
-}
-
-
-
-/* Responsive navigation */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  #desktop-menu {
-    display: none;
-  }
 }
 
 
