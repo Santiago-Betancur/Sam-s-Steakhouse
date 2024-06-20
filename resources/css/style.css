@@ -59,17 +59,22 @@ h1 {
   padding: 5px;
 }
 /* Footer Styles */
+footer {
+  width: 100%;
+  background-color: #f8f9fa; /* Same background color as navigation */
+}
+
 .footer-container {
   display: flex;
   justify-content: space-between; /* Adjusted to space items evenly */
   align-items: center;
   padding: 20px 40px; /* Increased padding for modern look */
-  background-color: #f8f9fa; /* Same background color as navigation */
   color: #343a40; /* Dark text color for contrast */
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
   max-width: 1200px; /* Constrain width */
-  margin: 0 auto; /* Center the footer */
+  margin: 0 auto; /* Center the footer content */
   border-top: 1px solid #dee2e6; /* Add a top border for separation */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .footer-address {
@@ -518,14 +523,9 @@ nav li a:hover {
   font-size: 1.2rem;
   line-height: 1.6;
 }
-
-
-
-
-
 /* Menu Styles */
 .menu-navigation {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px 3rem;
@@ -600,13 +600,113 @@ nav li a:hover {
 }
 
 .menu-button {
-  margin-left: 50%;
+  display: flex;
+  justify-content: center;
+}
+.drinks-container {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
+}
+/* Tabs styling */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd; /* Add a bottom border to simulate the tab container */
 }
 
-.drinks-container {
-  flex-direction: column;
-  margin: 20px auto;
-  padding: 0;
+.tab {
+  padding: 10px 20px;
+  margin: 0;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #343a40;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd; /* Add border to tabs */
+  border-bottom: none; /* Remove bottom border for tab effect */
+  border-radius: 5px 5px 0 0; /* Rounded corners at the top */
+  transition: background-color 0.3s ease;
+}
+
+.tab:not(:last-child) {
+  border-right: none; /* Remove right border except the last tab */
+}
+
+.tab:hover {
+  background-color: #e9ecef;
+}
+
+/* Active tab styling */
+.tab.active {
+  background-color: #600e0d;
+  border-bottom: 2px solid #fff; /* Make active tab appear connected to the content */
+  color: #fff;
+  position: relative;
+  top: 2px; /* Slightly lift the active tab */
+}
+
+/* Menu content sections */
+.menu-content {
+  display: none;
+  padding: 20px; /* Add padding for content */
+  border: 1px solid #ddd; /* Border for content section */
+  background-color: #fff;
+}
+
+.menu-content.active {
+  display: block;
+}
+
+/* Media Queries */
+@media (max-width: 760px) {
+  .menu-navigation {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 1rem;
+  }
+
+  .tabs {
+    border-bottom: 2px solid #ddd; /* Add bottom border in mobile view */
+  }
+
+  .tab {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    border-radius: 5px; /* Full rounded corners for mobile */
+    border-bottom: 1px solid #ddd; /* Add bottom border back for mobile */
+  }
+
+  .tab:not(:last-child) {
+    border-right: none; /* Ensure no right border on mobile */
+  }
+
+  .tab.active {
+    border-bottom: none; /* Remove bottom border on active tab for mobile */
+  }
+
+  .menu-navigation h1 {
+    font-size: 1.2rem;
+  }
+
+  .menu-content h1 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+  }
+
+  .menu-item {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .combination-box {
+    margin: 10px 0;
+  }
 }
 
 /* Gallery Styles */
