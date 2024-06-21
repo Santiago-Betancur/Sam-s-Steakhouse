@@ -2,49 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sam's Steak and Seafood</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=PT+Serif:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet" />
     <link href="/resources/css/style.css" rel="stylesheet" />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="/resources/images/Sams logo.png"
-    />
-    <script
-      src="https://kit.fontawesome.com/3fa9507377.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Sam's Steak and Seafood</title>
+    <link rel="shortcut icon" type="image/png" href="/resources/images/Sams logo.png" />
+    <script src="https://kit.fontawesome.com/3fa9507377.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
   </head>
-
   <body>
-    <section>
-      <header>
-        <div class="navigation-container">
-          <div class="logo">
-            <a href="/index.html"
-              ><img src="/resources/images/Sams logo.png"
-            /></a>
-          </div>
-          <nav>
-            <ul>
-              <li><a href="/menu.html">Menu</a></li>
-              <li><a href="/about.html">About</a></li>
-              <li><a href="/location.html">Location</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="/events.html">Specials</a></li>
-            </ul>
-          </nav>
+    <header>
+      <div class="navigation-container" id="navigation-container">
+        <div class="logo" id="logo">
+          <a href="/index.html"><img src="/resources/images/Sams logo.png" alt="Sam's Logo"></a>
         </div>
-      </header>
+        <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <nav id="desktop-menu">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/menu.html">Menu</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/events.html">Specials</a></li>
+          </ul>
+        </nav>
+      </div>
+      <nav id="mobile-menu">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/menu.html">Menu</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/location.html">Location</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/events.html">Specials</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="contact-section">
       <div class="contact-container">
-        <div class="contact-box">
+        <div class="contact-info">
           <div class="contact-item">
             <h3>Phone Number:</h3>
             <p>
@@ -52,85 +56,49 @@
             </p>
           </div>
           <div class="contact-item">
-            <h3>facebook:</h3>
+            <h3>Facebook:</h3>
             <p>
-              <a
-                href="https://www.facebook.com/samsseafoodsteakhouse/?hc_ref=ARRcdGO6A5YAOOcuUkVFX1Ym_T0tcCh3E5vaAP0ZfECqvqvmGUP8xUsCdrX2y5Q9jpI&fref=nf&__xts__[0]=68.ARDV0N9ZH4CW1veHXv6MxZc-zBjBBSKxvPSxc7rC8oI7FUVd4nbBbCPUTGL7pChhZOLolSFKz-zcKWBs6iW2CXMkgOaY5B0sJkWQN4Fn8Zxzsu1sFnzy2NMIibjFEepaqBo50vVZm7fZzY9HyGwZwDDGhq5X-Ojx3jaeNUqewTT-7_KFVbcJnLrEoKcVHe_37UdPcjo6381UWX2-WxKp9sxTAxRuz8dx_-f_U1LGB27GKqnmWLOkL3tQvsVpUwgj0F3usfqwTL1YbsO7X5sB7ZDvd7dXfQe_qqb4p_Lrudytl59pA8mhCA"
-                target="blank"
-                ><i class="fa-brands fa-facebook-square"></i
-              ></a>
+              <a href="https://www.facebook.com/samsseafoodsteakhouse/?hc_ref=ARRcdGO6A5YAOOcuUkVFX1Ym_T0tcCh3E5vaAP0ZfECqvqvmGUP8xUsCdrX2y5Q9jpI&fref=nf&__xts__[0]=68.ARDV0N9ZH4CW1veHXv6MxZc-zBjBBSKxvPSxc7rC8oI7FUVd4nbBbCPUTGL7pChhZOLolSFKz-zcKWBs6iW2CXMkgOaY5B0sJkWQN4Fn8Zxzsu1sFnzy2NMIibjFEepaqBo50vVZm7fZzY9HyGwZwDDGhq5X-Ojx3jaeNUqewTT-7_KFVbcJnLrEoKcVHe_37UdPcjo6381UWX2-WxKp9sxTAxRuz8dx_-f_U1LGB27GKqnmWLOkL3tQvsVpUwgj0F3usfqwTL1YbsO7X5sB7ZDvd7dXfQe_qqb4p_Lrudytl59pA8mhCA" target="blank"><i class="fa-brands fa-facebook-square"></i></a>
             </p>
           </div>
           <div class="contact-item">
-            <h3>instagram:</h3>
-            <a href="https://www.instagram.com/sams_johnstown/" target="blank"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
+            <h3>Instagram:</h3>
+            <p>
+              <a href="https://www.instagram.com/sams_johnstown/" target="blank"><i class="fa-brands fa-instagram"></i></a>
+            </p>
           </div>
           <div class="contact-item">
-            <h3>E-mail:</h3>
-            <a href="mailto:steakhousesams@gmail.com"
-              ><i class="fa-solid fa-envelope"></i
-            ></a>
+            <h3>Email:</h3>
+            <p>
+              <a href="mailto:steakhousesams@gmail.com"><i class="fa-solid fa-envelope"></i> steakhousesams@gmail.com</a>
+            </p>
           </div>
         </div>
-        <div class="contact-box">
+        <div class="contact-hours">
           <h1>Hours</h1>
           <p>
-            <br /><span> Monday:</span> 11:00am - 9:00pm <br /><span
-              >Tuesday:</span
-            >
-            Closed <br /><span>Wednesday:</span> 11:00am - 9:00pm <br /><span
-              >Thursday</span
-            >
-            11:00am - 9:00pm <br /><span>Friday</span> 11:00am - 9:30pm
-            <br /><span>Saturday</span> 11:00am - 9:30pm <br /><span
-              >Sunday </span
-            >4:00pm- 8:00pm
+            <span>Monday:</span> 11:00am - 9:00pm <br /><span>Tuesday:</span> Closed <br /><span>Wednesday:</span> 11:00am - 9:00pm <br /><span>Thursday:</span> 11:00am - 9:00pm <br /><span>Friday:</span> 11:00am - 9:30pm <br /><span>Saturday:</span> 11:00am - 9:30pm <br /><span>Sunday:</span> 4:00pm - 8:00pm
           </p>
         </div>
       </div>
-
-      <footer>
-        <div class="footer-container">
+    </section>
+    
+    <footer>
+      <div class="footer-container">
           <div class="footer-adress">
-            <h3>Sam's Seafood Steakhouse</h3>
-            <p>
-              281 North Comrie Avenue,<br />
-              Johnstown, NY 12095
-            </p>
+              <h3>Sam's Seafood Steakhouse</h3>
+              <p>281 North Comrie Avenue,<br> Johnstown, NY 12095</p>
           </div>
           <div class="footer-number">
-            <h3>Phone Number:</h3>
-            <p>
-              <a class="phone-number" href="tel:518-762-7267">518-762-7267</a>
-            </p>
+              <h3>Phone Number:</h3>
+              <p> <a class="phone-number" href="tel:518-762-7267">518-762-7267</a></p>
           </div>
           <div class="socials">
-            <ul>
-              <li>
-                <a
-                  href="https://www.facebook.com/samsseafoodsteakhouse/?hc_ref=ARRcdGO6A5YAOOcuUkVFX1Ym_T0tcCh3E5vaAP0ZfECqvqvmGUP8xUsCdrX2y5Q9jpI&fref=nf&__xts__[0]=68.ARDV0N9ZH4CW1veHXv6MxZc-zBjBBSKxvPSxc7rC8oI7FUVd4nbBbCPUTGL7pChhZOLolSFKz-zcKWBs6iW2CXMkgOaY5B0sJkWQN4Fn8Zxzsu1sFnzy2NMIibjFEepaqBo50vVZm7fZzY9HyGwZwDDGhq5X-Ojx3jaeNUqewTT-7_KFVbcJnLrEoKcVHe_37UdPcjo6381UWX2-WxKp9sxTAxRuz8dx_-f_U1LGB27GKqnmWLOkL3tQvsVpUwgj0F3usfqwTL1YbsO7X5sB7ZDvd7dXfQe_qqb4p_Lrudytl59pA8mhCA"
-                  target="blank"
-                  ><i class="fa-brands fa-facebook-square"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/sams_johnstown/"
-                  target="blank"
-                  ><i class="fa-brands fa-instagram"></i
-                ></a>
-              </li>
-              <li>
-                <a href="mailto:steakhousesams@gmail.com"
-                  ><i class="fa-solid fa-envelope"></i
-                ></a>
-              </li>
-            </ul>
+              <ul>
+                  <li><a href="https://www.facebook.com/samsseafoodsteakhouse/?hc_ref=ARRcdGO6A5YAOOcuUkVFX1Ym_T0tcCh3E5vaAP0ZfECqvqvmGUP8xUsCdrX2y5Q9jpI&fref=nf&__xts__[0]=68.ARDV0N9ZH4CW1veHXv6MxZc-zBjBBSKxvPSxc7rC8oI7FUVd4nbBbCPUTGL7pChhZOLolSFKz-zcKWBs6iW2CXMkgOaY5B0sJkWQN4Fn8Zxzsu1sFnzy2NMIibjFEepaqBo50vVZm7fZzY9HyGwZwDDGhq5X-Ojx3jaeNUqewTT-7_KFVbcJnLrEoKcVHe_37UdPcjo6381UWX2-WxKp9sxTAxRuz8dx_-f_U1LGB27GKqnmWLOkL3tQvsVpUwgj0F3usfqwTL1YbsO7X5sB7ZDvd7dXfQe_qqb4p_Lrudytl59pA8mhCA" target="_blank"><i class="fa-brands fa-facebook-square"></i></a></li>
+                  <li><a href="https://www.instagram.com/sams_johnstown/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="mailto:steakhousesams@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+              </ul>
           </div>
-        </div>
-      </footer>
-    </section>
-  </body>
-</html>
+      </div>
+  </footer>
