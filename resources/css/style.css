@@ -62,34 +62,34 @@ h1 {
 footer {
   width: 100%;
   background-color: #f8f9fa; /* Same background color as navigation */
+  position: fixed; /* Fix the footer at the bottom */
+  bottom: 0;
+  left: 0;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between; /* Adjusted to space items evenly */
+  justify-content: space-between;
   align-items: center;
   padding: 20px 40px; /* Increased padding for modern look */
   color: #343a40; /* Dark text color for contrast */
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  max-width: 1200px; /* Constrain width */
-  margin: 0 auto; /* Center the footer content */
-  border-top: 1px solid #dee2e6; /* Add a top border for separation */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  max-width: 1200px; /* Max width for the footer content */
+  margin: 0 auto; /* Center the footer content */
 }
 
-.footer-address {
+.footer-address,
+.footer-number {
   flex-basis: 30%; /* Adjusted for better layout */
   font-size: 1rem; /* Increased font size */
   padding: 10px; /* Added padding for spacing */
 }
 
-.footer-address p {
-  margin: 0;
-}
-
+.footer-address p,
 .footer-number a {
-  color: #343a40; /* Dark text color */
-  font-size: 1rem;
+  margin: 0;
+  color: #343a40;
   text-decoration: none; /* Remove underline */
 }
 
@@ -97,7 +97,8 @@ footer {
   color: #adb5bd; /* Hover effect */
 }
 
-.footer-number h3 {
+.footer-number h3,
+.footer-address h3 {
   font-size: 1rem;
   margin: 0;
 }
@@ -334,12 +335,14 @@ nav li a:hover {
 }
 
 
-/* Location Styles */
+/* Location Page Styles */
 .location-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
 }
 
 .location-address {
@@ -347,10 +350,17 @@ nav li a:hover {
   margin-bottom: 20px;
 }
 
+.location-map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 .location-map iframe {
   width: 100%;
-  max-width: 800px; /* Set a max width for larger screens */
-  height: 450px; /* Increase the height for better visibility */
+  height: 100%;
   border: 0;
 }
 
@@ -464,45 +474,123 @@ nav li a:hover {
 .contact-container .socials ul li i:hover {
   color: #600e0d; /* Hover effect */
 }
-
-
-/* About Us Styles */
+/* About Page Styles */
 .about-container {
   display: flex;
-  flex-direction: row;
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
-  padding: 40px;
-  background-color: #ffffff;
-  color: #343a40;
-  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
-  gap: 20px; /* Add gap between flex items */
-  height: 100vh; /* Ensure the container takes full viewport height */
-  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: flex-start; /* Ensure content starts from the top */
+  align-items: center; /* Center the content horizontally */
+  max-width: 1200px; /* Set a max width for the about content */
+  margin: 0 auto; /* Center the container */
+  height: 100vh;
+  padding: 20px 0; /* Adjust padding for top and bottom */
 }
 
-.about-container img {
-  flex-basis: 30%; /* Ensure images take up 25% of the container */
-  max-width: 25%; /* Ensure image does not exceed 25% width */
-  border-radius: 10px; /* Rounded corners for images */
-  margin: 0 20px; /* Add margin around the image */
-}
-
+/* About Info Styles */
 .about-info {
-  flex-basis: 60%; /* Ensure text takes up 60% of the container */
- 
+  text-align: center;
+  margin: 0; /* Remove margins */
+  padding-bottom: 10px; /* Add a small gap between text and slideshow */
+  flex: 0 0 auto; /* Ensure the text does not take up unnecessary space */
+  width: 100%; /* Ensure the text container takes the full width */
 }
 
 .about-info h1 {
   font-size: 2rem;
-  margin-bottom: 20px;
-  font-weight: 700;
 }
 
 .about-info p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
+
+/* Slideshow Container Styles */
+.slideshow-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure the container hides overflow */
+  width: 100%;
+  margin: 0 auto;
+  flex-grow: 1; /* Allow the slideshow to take up remaining space */
+}
+
+.slides {
+  display: none;
+  width: 100%;
+  height: auto; /* Ensure the slides fill the container */
+}
+
+.slides img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 50vh; /* Adjust image height */
+  object-fit: cover; /* Ensure the images cover the container without distortion */
+  border-radius: 10px;
+}
+
+/* Dot/Indicator Styles */
+.dot-container {
+  text-align: center;
+  margin-top: 10px; /* Add some space between the slideshow and the dots */
+  width: 100%; /* Ensure the dot container takes the full width */
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 10px 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 10px 0; /* Reduce padding for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 0 10px;
+  }
+
+  .slideshow-container {
+    height: auto; /* Allow height to adjust based on content */
+
+  }
+
+  .slides img {
+    max-height: 40vh; /* Adjust image height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-info p {
+    font-size: 0.9rem;
+  }
+
+  .slides img {
+    max-height: 30vh; /* Further adjust image height for very small screens */
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+}
+
 /* Menu Styles */
 .menu-navigation {
   display: flex;
@@ -689,25 +777,7 @@ nav li a:hover {
   }
 }
 
-/* Gallery Styles */
-.gallery-container {
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  overflow: scroll;
-}
 
-.gallery-container img {
-  height: 300px;
-  width: 300px;
-}
-
-.gallery-container img:hover {
-  height: 600px;
-  width: 600px;
-}
 
 /* Event Styles */
 .event-container {

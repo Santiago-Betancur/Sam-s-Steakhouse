@@ -24,79 +24,137 @@
   </head>
 
   <body>
-    <section>
-      <header>
-        <div class="navigation-container">
-          <div class="logo">
-            <a href="/index.html"
-              ><img src="/resources/images/Sams logo.png"
-            /></a>
-          </div>
-          <nav>
-            <ul>
-              <li><a href="/menu.html">Menu</a></li>
-              <li><a href="/about.html">About</a></li>
-              <li><a href="/location.html">Location</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="/events.html">Specials</a></li>
-            </ul>
-          </nav>
+    <header>
+      <div class="navigation-container" id="navigation-container">
+        <div class="logo" id="logo">
+          <a href="/index.html"><img src="/resources/images/Sams logo.png" alt="Sam's Logo"></a>
         </div>
-      </header>
-
-      <div class="about-container">
-        <img src="/resources/images/Out-drive.JPG" alt="Sams-out-pic" />
-        <div class="about-info">
-          <h1>Welcome to Sam's Seafood Steakhouse</h1>
-          <p>
-            A popular eatery located in the Heart of Johnstown, NY.<br />
-            Sam's Seafood and Steakhouse offers a wide variety of hand-cut
-            steaks and seafood.<br />
-            We also offer some lighter dining options such as salads, hot
-            sandwiches, and hearty pasta dishes.
-          </p>
+        <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <nav id="desktop-menu">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/menu.html">Menu</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/events.html">Specials</a></li>
+          </ul>
+        </nav>
+      </div>
+      <nav id="mobile-menu">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/menu.html">Menu</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/location.html">Location</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/events.html">Specials</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <div class="about-container">
+      <div class="about-info">
+        <h1>Welcome to Sam's Seafood Steakhouse</h1>
+        <p>
+          A popular eatery located in the Heart of Johnstown, NY.<br />
+          Sam's Seafood and Steakhouse offers a wide variety of hand-cut
+          steaks and seafood.<br />
+          We also offer some lighter dining options such as salads, hot
+          sandwiches, and hearty pasta dishes.
+        </p>
+        <!-- Slideshow Container -->
+      <div class="slideshow-container">
+        <div class="slides fade">
+          <img src="resources/images/12B80D2C-D7AE-4FD0-BD68-8F74FC90D9B8.JPG" style="width:100%">
+        </div>
+        <div class="slides fade">
+          <img src="resources/images/4C809691-6FC8-46DA-AE3D-55957901B015.JPG" style="width:100%">
+        </div>
+        <div class="slides fade">
+          <img src="resources/images/ABF77AAA-34AB-4B1A-99E9-AC443E282CC5.JPG" style="width:100%">
+        </div>
+        <div class="slides fade">
+          <img src="resources/images/CBE13563-0C31-476B-898E-6D46DD231BE3.JPG" style="width:100%">
+        </div>
+        <div class="slides fade">
+          <img src="resources/images/IMG_0165.JPG" style="width:100%">
+        </div>
+        <div class="slides fade">
+          <img src="resources/images/Out-drive.JPG" style="width:100%">
+        </div>
+        <div class="slides fade">
+          <img src="resources/images/IMG_2026.JPG" style="width:100%">
+        </div>
+        <div class="slides fade">
+          <img src="resources/images/IMG_2782.JPG" style="width:100%">
+        </div>
+        <div class="slides fade">
+          <img src="resources/images/Sams food example.jpg" style="width:100%">
+        </div>
+        <!-- Dots/Indicators -->
+        <div style="text-align:center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
         </div>
       </div>
-      <footer>
-        <div class="footer-container">
-          <div class="footer-adress">
-            <h3>Sam's Seafood Steakhouse</h3>
-            <p>
-              281 North Comrie Avenue,<br />
-              Johnstown, NY 12095
-            </p>
-          </div>
-          <div class="footer-number">
-            <h3>Phone Number:</h3>
-            <p>
-              <a class="phone-number" href="tel:518-762-7267">518-762-7267</a>
-            </p>
-          </div>
-          <div class="socials">
-            <ul>
-              <li>
-                <a
-                  href="https://www.facebook.com/samsseafoodsteakhouse/?hc_ref=ARRcdGO6A5YAOOcuUkVFX1Ym_T0tcCh3E5vaAP0ZfECqvqvmGUP8xUsCdrX2y5Q9jpI&fref=nf&__xts__[0]=68.ARDV0N9ZH4CW1veHXv6MxZc-zBjBBSKxvPSxc7rC8oI7FUVd4nbBbCPUTGL7pChhZOLolSFKz-zcKWBs6iW2CXMkgOaY5B0sJkWQN4Fn8Zxzsu1sFnzy2NMIibjFEepaqBo50vVZm7fZzY9HyGwZwDDGhq5X-Ojx3jaeNUqewTT-7_KFVbcJnLrEoKcVHe_37UdPcjo6381UWX2-WxKp9sxTAxRuz8dx_-f_U1LGB27GKqnmWLOkL3tQvsVpUwgj0F3usfqwTL1YbsO7X5sB7ZDvd7dXfQe_qqb4p_Lrudytl59pA8mhCA"
-                  target="blank"
-                  ><i class="fa-brands fa-facebook-square"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/sams_johnstown/"
-                  target="blank"
-                  ><i class="fa-brands fa-instagram"></i
-                ></a>
-              </li>
-              <li>
-                <a href="mailto:steakhousesams@gmail.com"
-                  ><i class="fa-solid fa-envelope"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
+    </div>
+      </div>
+    
+      
+     
+    
+    <footer>
+      <div class="footer-container">
+        <div class="footer-address">
+          <h3>Sam's Seafood Steakhouse</h3>
+          <p>
+            281 North Comrie Avenue,<br />
+            Johnstown, NY 12095
+          </p>
         </div>
-      </footer>
-    </section>
+        <div class="footer-number">
+          <h3>Phone Number:</h3>
+          <p>
+            <a class="phone-number" href="tel:518-762-7267">518-762-7267</a>
+          </p>
+        </div>
+        <div class="socials">
+          <ul>
+            <li>
+              <a
+                href="https://www.facebook.com/samsseafoodsteakhouse/?hc_ref=ARRcdGO6A5YAOOcuUkVFX1Ym_T0tcCh3E5vaAP0ZfECqvqvmGUP8xUsCdrX2y5Q9jpI&fref=nf&__xts__[0]=68.ARDV0N9ZH4CW1veHXv6MxZc-zBjBBSKxvPSxc7rC8oI7FUVd4nbBbCPUTGL7pChhZOLolSFKz-zcKWBs6iW2CXMkgOaY5B0sJkWQN4Fn8Zxzsu1sFnzy2NMIibjFEepaqBo50vVZm7fZzY9HyGwZwDDGhq5X-Ojx3jaeNUqewTT-7_KFVbcJnLrEoKcVHe_37UdPcjo6381UWX2-WxKp9sxTAxRuz8dx_-f_U1LGB27GKqnmWLOkL3tQvsVpUwgj0F3usfqwTL1YbsO7X5sB7ZDvd7dXfQe_qqb4p_Lrudytl59pA8mhCA"
+                target="blank"
+                ><i class="fa-brands fa-facebook-square"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/sams_johnstown/"
+                target="blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="mailto:steakhousesams@gmail.com"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+   
   </body>
 </html>

@@ -26,5 +26,36 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+$(document).ready(function() {
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let slides = $(".slides");
+    let dots = $(".dot");
+    slides.hide();
+
+    let currentSlide = slides.eq(slideIndex - 1);
+
+    currentSlide.fadeOut(500, function() {
+      currentSlide.css("z-index", "1");
+    });
+
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+
+    let nextSlide = slides.eq(slideIndex - 1);
+
+    nextSlide.css("z-index", "2");
+    nextSlide.fadeIn(500);
+
+    dots.removeClass("active");
+    dots.eq(slideIndex - 1).addClass("active");
+
+    setTimeout(showSlides, 4000); // Change image every 5 seconds
+  }
+});
 
 
